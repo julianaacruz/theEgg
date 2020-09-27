@@ -22,8 +22,8 @@ public class Composition extends PApplet{
 	}
 	
 	public void Controller(String array1[]) {
-		Controller trying = new Controller(this);
-		trying.Words(array1);
+		Controller compController = new Controller(this);
+		compController.words(array1);
 	}
 
 }

@@ -9,8 +9,8 @@ public class Controller extends PApplet {
 		this.app = app;
 	}
 	
-	public void Words(String array1[]) {
-		Word trying = new Word(this);
-		trying.DidItCharge(array1);
+	public void words(String array1[]) {
+		Word words = new Word(this);
+		words.splitArray(array1);
 	}
 }
