@@ -8,8 +8,10 @@ public class Main extends PApplet {
 	static PImage bg2;
 	static PImage bg3;
 	static PImage bg4;
+	String [] arrayStory;
 	Composition bg = new Composition(this);
-	
+	Composition text = new Composition(this);
+
 	public static void main(String[] args) {
 		PApplet.main(Main.class.getName());
 		
@@ -17,12 +19,15 @@ public class Main extends PApplet {
 	public void settings() {
 		size(1200,800);
 
+
 	}
 	public void setup() {
 		bg1 = loadImage ("Background1.png");
 		bg2 = loadImage ("Background2.png");
 		bg3 = loadImage ("Background3.png");
 		bg4 = loadImage ("Background4.png");
+		arrayStory = loadStrings ("../data/TheEgg.txt");
+		text.Controller(arrayStory);
 
 
 

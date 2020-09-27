@@ -1,5 +1,6 @@
 package view;
 
+import control.Controller;
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -18,7 +19,11 @@ public class Composition extends PApplet{
 		
 		app.image(image,X,540);
 				
-
+	}
+	
+	public void Controller(String array1[]) {
+		Controller trying = new Controller(this);
+		trying.Words(array1);
 	}
 
 }
