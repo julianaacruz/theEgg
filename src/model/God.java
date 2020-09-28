@@ -2,9 +2,9 @@ package model;
 
 import processing.core.PApplet;
 
-public class Man extends Element{
+public class God extends Element{
 
-	public Man(PApplet app) {
+	public God(PApplet app) {
 		super(app);
 
 	}

@@ -9,6 +9,8 @@ public class Main extends PApplet {
 	static PImage bg3;
 	static PImage bg4;
 	static PImage man;
+	static PImage god;
+
 	String [] arrayStory;
 	Composition bg = new Composition(this);
 	Composition text = new Composition(this);
@@ -31,6 +33,8 @@ public class Main extends PApplet {
 		bg3 = loadImage ("Background3.png");
 		bg4 = loadImage ("Background4.png");
 		man = loadImage ("Man.png");
+		god = loadImage ("God.png");
+
 		arrayStory = loadStrings ("../data/TheEgg.txt");
 		text.controllerList(arrayStory);
 		imageMode(CENTER);
@@ -48,7 +52,7 @@ public class Main extends PApplet {
 		bg.parallaxEffect(mouseX,830,-5, bg3);
 		bg.parallaxEffect(mouseX,955,-35, bg4);
 		element.drawElement(800, 540, man);
-		//image (man,800,540);
+		image (god,700,540);
 
 	}
 	
