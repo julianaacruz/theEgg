@@ -5,7 +5,7 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 public class Composition extends PApplet{
-	PApplet app;
+	private PApplet app;
 	
 	public Composition(PApplet app) {
 		this.app = app;
@@ -21,9 +21,15 @@ public class Composition extends PApplet{
 				
 	}
 	
-	public void Controller(String array1[]) {
+	public void controllerList(String array1[]) {
 		Controller compController = new Controller(this);
 		compController.words(array1);
 	}
+	
+	public void drawElement(int posX, int posY, PImage image) {
+		Controller element = new Controller(this);
+		element.drawElement(posX, posY, image);
+	}
+	
 
 }

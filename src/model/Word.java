@@ -2,28 +2,41 @@ package model;
 import java.util.ArrayList;
 
 import processing.core.PApplet;
+//import processing.core.PImage;
+import processing.core.PImage;
 
 public class Word extends PApplet{
-	PApplet app;
-	ArrayList<String> listWords;//Infinitos elementos
+	private PApplet app;
+	private  ArrayList<String> listWords;//Infinitos elementos
 	
 	public Word(PApplet app) {
 		this.app = app;
+		listWords = new ArrayList<String>();
+
 	}
 	public void splitArray(String array1[]) {
 		//System.out.println(array1.length);
 		
-		listWords = new ArrayList<String>();
 
 		for(int i=0; i < array1.length ; i++) { 
 			String [] tempArray = array1[i].split(" ");
 			for (int j=0; j< tempArray.length; j++) {
 				listWords.add(tempArray[j].trim());
 			}
-		for(String element: listWords) {
-			System.out.println(element);
+			}
 		}
+	
+		public void drawElement(int posX, int posY, PImage image) {
+		for(int i=0; i < listWords.size() ; i++) {
+			System.out.println(listWords.get(i));
+			if(listWords.get(i).equals("child")) {	
+				Element man = new Element(this);
+				man.drawMan(posX, posY, image);
+			}
+		}			
+		System.out.println("hola");
+
 		}
 	}
 	
-}
+
