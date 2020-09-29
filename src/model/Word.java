@@ -29,7 +29,8 @@ public class Word extends PApplet{
 		public void drawElement(int posX, int posY, PImage image) {
 		for(int i=0; i < listWords.size() ; i++) {
 			System.out.println(listWords.get(i));
-			
+			System.out.println("hola");
+
 			if(listWords.get(i).equals("child")) {	
 				Element man = new Element(this);
 				man.drawMan(posX, posY, image);
@@ -39,24 +40,23 @@ public class Word extends PApplet{
 				god.drawGod(posX, posY, image);
 				
 			} else if (listWords.get(i).equals("Lincoln")) {	
-				Element god = new Element(this);
-				god.drawLincoln(posX, posY, image);
+				Element lincoln = new Element(this);
+				lincoln.drawLincoln(posX, posY, image);
 				
 			} else if (listWords.get(i).equals("Hitler")) {	
-				Element god = new Element(this);
-				god.drawHitler(posX, posY, image);
+				Element hitler = new Element(this);
+				hitler.drawHitler(posX, posY, image);
 			
 			} else if (listWords.get(i).equals("Jesus")) {	
-				Element god = new Element(this);
-				god.drawJesus(posX, posY, image);
+				Element jesus = new Element(this);
+				jesus.drawJesus(posX, posY, image);
 				
-			} else if (listWords.get(i).equals("god")) {	
-				Element god = new Element(this);
-				god.drawEgg(posX, posY, image);
+			} else if (listWords.get(i).equals("egg")) {	
+				Element egg = new Element(this);
+				egg.drawEgg(posX, posY, image);
 			} 
 		
 		}			
-		System.out.println("hola");
 
 		}
 	}
