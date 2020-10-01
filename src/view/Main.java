@@ -18,7 +18,7 @@ public class Main extends PApplet {
 	static PImage people;
 
 
-
+	String [] lineJesus;
 	String [] arrayStory;
 	Composition bg = new Composition(this);
 	Composition text = new Composition(this);
@@ -48,6 +48,9 @@ public class Main extends PApplet {
 		egg = loadImage ("Egg.png");
 		johnWB = loadImage ("JohnWB.png");
 		people = loadImage ("People.png");
+		
+		String jesusLine= "I'm Jesus?";
+		frameRate(20);
 
 		arrayStory = loadStrings ("../data/TheEgg.txt");
 		text.controllerList(arrayStory);
@@ -55,6 +58,9 @@ public class Main extends PApplet {
 
 	}
 	
+	int i=0, j=0;
+	int x=10, y=15;
+	String message;
 	
 	public void draw() {
 		tint(255, 255);
@@ -67,10 +73,10 @@ public class Main extends PApplet {
 		element.drawElement(800, 540, man);
 		image (god,710,540);
 		image (man,900,540);
-		tint(255, 250);
-		//image (johnWB,850,540);
-		//image (people,700,540);
-		//image (people,820,540);
+		/*tint(255, 250);
+		image (johnWB,850,540);
+		image (people,700,540);
+		image (people,820,540);*/
 
 		tint(255, 255);
 		image (lincoln,800,540);
@@ -79,9 +85,21 @@ public class Main extends PApplet {
 		//image (egg,750,540);
 		bg.parallaxEffect(mouseX,795,-1, bg2);
 		bg.parallaxEffect(mouseX,830,-5, bg3);
-		bg.parallaxEffect(mouseX,955,-35, bg4);
+		bg.parallaxEffect(mouseX,955,-35, bg4);	
 
+		/* if (mouseX>300) {
+			    message = jesusLine[i];
+			  }
 
+			  //-----------------------------
+			  if (j < message.length()) {
+			    text(message.charAt(j), x*j+10, y*i);
+			    j++;
+			  }
+			  else { 
+			    j=0;
+			    i++;
+			  }*/
 	}
 	
 

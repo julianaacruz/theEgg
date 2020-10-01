@@ -19,42 +19,52 @@ public class Word extends PApplet{
 		
 
 		for(int i=0; i < array1.length ; i++) { 
-			String [] tempArray = array1[i].split(" ");
-			for (int j=0; j< tempArray.length; j++) {
-				listWords.add(tempArray[j].trim());
+			String [] tempArray = array1[i].split(" "); // separar por espacios
+			for (int j=0; j< tempArray.length; j++) {	
+				String [] tempArray2 = tempArray[j].split("\\?"); // elimina signos de interrogación
+				for (int k=0; k< tempArray2.length; k++) {
+					String [] tempArray3 = tempArray2[k].split("\\."); // elimina puntos
+					for (int l=0; l< tempArray3.length; l++) {
+						listWords.add(tempArray3[l].trim());
+					}
+				}
 			}
 			}
+		System.out.println(listWords);
+		System.out.println("Número de palabras: " + listWords.size());
 		}
+		
+		
 	
 		public void drawElement(int posX, int posY, PImage image) {
-		for(int i=0; i < listWords.size() ; i++) {
-			System.out.println(listWords.get(i));
+			for(int i=0; i < listWords.size() ; i++) {
+			System.out.println(listWords);
 			System.out.println("hola");
 
-			if(listWords.get(i).equals("child")) {	
+			/*if(listWords.get(i).equals("child") {	
 				Element man = new Element(this);
 				man.drawMan(posX, posY, image);
 				
-			} else if (listWords.get(i).equals("god")) {	
+			} else if (listWords.get(i).equals("god") {	
 				Element god = new Element(this);
 				god.drawGod(posX, posY, image);
 				
-			} else if (listWords.get(i).equals("Lincoln")) {	
+			} else if (listWords.get(i).equals("Lincoln") {	
 				Element lincoln = new Element(this);
 				lincoln.drawLincoln(posX, posY, image);
 				
-			} else if (listWords.get(i).equals("Hitler")) {	
+			} else if (listWords.get(i).equals("Hitler") {	
 				Element hitler = new Element(this);
 				hitler.drawHitler(posX, posY, image);
 			
-			} else if (listWords.get(i).equals("Jesus")) {	
+			} else if (listWords.get(i).equals("Jesus") {	
 				Element jesus = new Element(this);
 				jesus.drawJesus(posX, posY, image);
 				
-			} else if (listWords.get(i).equals("egg")) {	
+			} else if (listWords.get(i).equals("Egg")) {	
 				Element egg = new Element(this);
 				egg.drawEgg(posX, posY, image);
-			} 
+			} */
 		
 		}			
 
