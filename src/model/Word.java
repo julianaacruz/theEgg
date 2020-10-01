@@ -30,16 +30,18 @@ public class Word extends PApplet{
 				}
 			}
 			}
-		System.out.println(listWords);
-		System.out.println("Número de palabras: " + listWords.size());
+		//System.out.println(listWords);
+		//System.out.println("Número de elementos totales: " + listWords.size());
 		}
 		
 		
 	
-		public void drawElement(int posX, int posY, PImage image) {
+		public void drawElement(int posX, int posY, PImage image, String array1[]) {
+			this.splitArray(array1);
+			//System.out.println(listWords);
+
 			for(int i=0; i < listWords.size() ; i++) {
-			System.out.println(listWords);
-			System.out.println("hola");
+				System.out.println(listWords.get(i));
 
 			/*if(listWords.get(i).equals("child") {	
 				Element man = new Element(this);

@@ -49,11 +49,10 @@ public class Main extends PApplet {
 		johnWB = loadImage ("JohnWB.png");
 		people = loadImage ("People.png");
 		
-		String jesusLine= "I'm Jesus?";
-		frameRate(20);
+		//frameRate(20);
 
 		arrayStory = loadStrings ("../data/TheEgg.txt");
-		text.controllerList(arrayStory);
+		//text.controllerList(arrayStory);
 		imageMode(CENTER);
 
 	}
@@ -67,16 +66,18 @@ public class Main extends PApplet {
 		float f=(float) 0.8;
 		bg1.loadPixels();
 
+		
+		// ubicación personajes
 		scale(f);
 		image (bg1,800,540);
 		
-		element.drawElement(800, 540, man);
+		element.drawElement(800, 540, man,arrayStory);
 		image (god,710,540);
 		image (man,900,540);
-		/*tint(255, 250);
+		tint(255, 250);
 		image (johnWB,850,540);
 		image (people,700,540);
-		image (people,820,540);*/
+		image (people,820,540);
 
 		tint(255, 255);
 		image (lincoln,800,540);

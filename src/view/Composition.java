@@ -21,14 +21,14 @@ public class Composition extends PApplet{
 				
 	}
 	
-	public void controllerList(String array1[]) {
+	/*public void controllerList(String array1[]) {
 		Controller compController = new Controller(this);
 		compController.words(array1);
-	}
+	}*/
 	
-	public void drawElement(int posX, int posY, PImage image) {
+	public void drawElement(int posX, int posY, PImage image, String array1[]) {
 		Controller element = new Controller(this);
-		element.drawElement(posX, posY, image);
+		element.drawElement(posX, posY, image, array1);
 	}
 	
 
