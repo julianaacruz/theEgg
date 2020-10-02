@@ -1,6 +1,7 @@
 package view;
 
 import processing.core.PApplet;
+import processing.core.PFont;
 import processing.core.PImage;
 
 public class Main extends PApplet {
@@ -16,9 +17,9 @@ public class Main extends PApplet {
 	static PImage egg;
 	static PImage johnWB;
 	static PImage people;
+	String s = "I'm Jesus?";
 
 
-	String [] lineJesus;
 	String [] arrayStory;
 	Composition bg = new Composition(this);
 	Composition text = new Composition(this);
@@ -52,7 +53,6 @@ public class Main extends PApplet {
 		//frameRate(20);
 
 		arrayStory = loadStrings ("../data/TheEgg.txt");
-		//text.controllerList(arrayStory);
 		imageMode(CENTER);
 
 	}
@@ -71,37 +71,90 @@ public class Main extends PApplet {
 		scale(f);
 		image (bg1,800,540);
 		
-		element.drawElement(800, 540, man,arrayStory);
-		image (god,710,540);
-		image (man,900,540);
-		tint(255, 250);
+		int scene = 0;
+		
+		if (mouseX>270 && mouseX<326 && mouseY>300 && mouseY<472) {
+			scene =1;
+		} else if (mouseX>360 && mouseX<413 && mouseY>300 && mouseY<472) {
+			scene=2;
+		} else if (mouseX>445 && mouseX<492 && mouseY>275 && mouseY<480) {
+			scene=3;
+		} else {
+			scene=0;
+		}
+
+		
+		switch(scene) {
+		  case 0: 
+			  tint(255, 255);
+			  image (god,710,540);
+			  image (man,900,540);
+			  
+			  tint(255, 50);
+			  image (lincoln,800,540);
+			  image (hitler,700,540);
+			  image (jesus,590,540);
+			break;
+		  case 1: 
+			  tint(255, 255);
+			  image (god,710,540);
+			  image (man,900,540);
+			  image (people,700,540);
+			  image (jesus,590,540);
+
+
+			  tint(255, 20);
+			  image (lincoln,800,540);
+			  image (hitler,700,540);
+		    break;
+		  case 2:
+			  tint(255, 255);
+			  image (god,710,540);
+			  image (man,900,540);
+			  image (people,820,540);
+			  image (hitler,700,540);
+
+
+			  tint(255, 20);
+			  image (lincoln,800,540);
+			  image (jesus,590,540);
+
+			  break;
+			  
+		  case 3:
+			  tint(255, 255);
+			  image (god,710,540);
+			  image (man,900,540);
+			  image (lincoln,800,540);
+			  image (johnWB,850,540);
+
+
+			  tint(255, 20);
+			  image (jesus,590,540);
+			  image (hitler,700,540);
+
+			  break;
+		}
+
+		//element.drawElement(800, 540, man, arrayStory);
+		
+		/*tint(255, 0);
 		image (johnWB,850,540);
 		image (people,700,540);
-		image (people,820,540);
+		image (people,820,540);*/
 
 		tint(255, 255);
-		image (lincoln,800,540);
-		image (hitler,700,540);
-		image (jesus,590,540);
+		
 		//image (egg,750,540);
 		bg.parallaxEffect(mouseX,795,-1, bg2);
 		bg.parallaxEffect(mouseX,830,-5, bg3);
 		bg.parallaxEffect(mouseX,955,-35, bg4);	
+		
+		textSize(32);
+		text(s,610,250);
+		
 
-		/* if (mouseX>300) {
-			    message = jesusLine[i];
-			  }
-
-			  //-----------------------------
-			  if (j < message.length()) {
-			    text(message.charAt(j), x*j+10, y*i);
-			    j++;
-			  }
-			  else { 
-			    j=0;
-			    i++;
-			  }*/
-	}
+			}
 	
 
 }

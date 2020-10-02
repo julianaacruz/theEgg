@@ -41,36 +41,32 @@ public class Word extends PApplet{
 			//System.out.println(listWords);
 
 			for(int i=0; i < listWords.size() ; i++) {
-				System.out.println(listWords.get(i));
+				//System.out.println(listWords.get(i));
 
-			/*if(listWords.get(i).equals("child") {	
-				Element man = new Element(this);
-				man.drawMan(posX, posY, image);
+			if(listWords.get(i).equals("child")) {	
+				System.out.println("child");
+				//ellipse(300,300,300,300);
+				//nada me pintaaaa :c
+			}else if (listWords.get(i).equals("god")) {
+				System.out.println("god");
+			}else if (listWords.get(i).equals("Hitler")) {
+				System.out.println("Hitler");
+			}else if (listWords.get(i).equals("Jesus")) {
+				System.out.println("Jesus");
+			}else if (listWords.get(i).equals("Lincoln")) {
+				System.out.println("Lincoln");
+			}else if (listWords.get(i).equals("egg")) {
+				System.out.println("egg");
+			}
+				/*Element man = new Element(this);
+				man.drawMan(posX, posY, image);*/
 				
-			} else if (listWords.get(i).equals("god") {	
-				Element god = new Element(this);
-				god.drawGod(posX, posY, image);
-				
-			} else if (listWords.get(i).equals("Lincoln") {	
-				Element lincoln = new Element(this);
-				lincoln.drawLincoln(posX, posY, image);
-				
-			} else if (listWords.get(i).equals("Hitler") {	
-				Element hitler = new Element(this);
-				hitler.drawHitler(posX, posY, image);
 			
-			} else if (listWords.get(i).equals("Jesus") {	
-				Element jesus = new Element(this);
-				jesus.drawJesus(posX, posY, image);
-				
-			} else if (listWords.get(i).equals("Egg")) {	
-				Element egg = new Element(this);
-				egg.drawEgg(posX, posY, image);
-			} */
+			}
 		
 		}			
 
 		}
-	}
+	
 	
 

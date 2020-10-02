@@ -9,11 +9,7 @@ public class Controller extends PApplet {
 	public Controller(PApplet app) {
 		this.app = app;
 	}
-	
-	/*public void words(String array1[]) {
-		Word words = new Word(this);
-		words.splitArray(array1);
-	}*/
+
 	
 	public void drawElement(int posX, int posY, PImage image, String array1[]) {
 		Word element = new Word(this);
