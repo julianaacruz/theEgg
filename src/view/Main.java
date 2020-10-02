@@ -17,9 +17,15 @@ public class Main extends PApplet {
 	static PImage egg;
 	static PImage johnWB;
 	static PImage people;
-	String jc = "I'm Jesus?";
-	String h = "I'm Hitler?";
-	String al = "I'm Abraham Lincoln?";
+	static PImage pFinal;
+	PFont montserrat;
+	
+	String jc = "“I'm Jesus?”";
+	String followers = "“And you’re everyone who followed him.”";
+	String h = "“I’m Hitler?”";
+	String killed = "“And you’re the millions he killed.”";
+	String al = "“I’m Abraham Lincoln?”";
+	String john = "“And you’re John Wilkes Booth, too”";
 
 
 
@@ -28,6 +34,7 @@ public class Main extends PApplet {
 	Composition bg = new Composition(this);
 	Composition text = new Composition(this);
 	Composition element = new Composition(this);
+	Composition phrase = new Composition(this);
 
 	public static void main(String[] args) {
 		PApplet.main(Main.class.getName());
@@ -53,8 +60,9 @@ public class Main extends PApplet {
 		egg = loadImage ("Egg.png");
 		johnWB = loadImage ("JohnWB.png");
 		people = loadImage ("People.png");
-		
-		//frameRate(20);
+		pFinal = loadImage ("Final.png");
+		montserrat = loadFont("Montserrat-SemiBold-70.vlw");
+
 
 		arrayStory = loadStrings ("../data/TheEgg.txt");
 		imageMode(CENTER);
@@ -69,6 +77,7 @@ public class Main extends PApplet {
 		tint(255, 255);
 		float f=(float) 0.8;
 		bg1.loadPixels();
+		textFont(montserrat);
 
 		
 		// ubicación personajes
@@ -78,7 +87,7 @@ public class Main extends PApplet {
 		bg.parallaxEffect(mouseX,830,-5, bg3);
 		bg.parallaxEffect(mouseX,955,-35, bg4);	
 		
-		textSize(32);
+		textSize(40);
 		
 		
 		int scene = 0;
@@ -95,6 +104,7 @@ public class Main extends PApplet {
 
 		
 		switch(scene) {
+		
 		  case 0: 
 			  tint(255, 255);
 			  image (god,710,540);
@@ -105,27 +115,46 @@ public class Main extends PApplet {
 			  image (hitler,700,540);
 			  image (jesus,590,540);
 			break;
+			
 		  case 1: 
 			  tint(255, 255);
 			  image (god,710,540);
 			  image (man,900,540);
 			  image (people,700,540);
 			  image (jesus,590,540);
-			  text(jc,615,250);
+			  fill(255);
+			 // text(jc,615,250);
+			  int x=610;
 
+			  for (int i =0; i < jc.length();i++) {
+				  frameRate(5);
+
+				  char c = jc.charAt(i);
+				  text(c,x,250);
+				  x = (int) (x + textWidth(c));
+
+			  }
+			  
+			  fill(240,223,113);
+			  text(followers,400,820);
 
 
 			  tint(255, 20);
 			  image (lincoln,800,540);
 			  image (hitler,700,540);
 		    break;
+		    
 		  case 2:
 			  tint(255, 255);
 			  image (god,710,540);
 			  image (man,900,540);
 			  image (people,820,540);
 			  image (hitler,700,540);
+			  fill(255);
 			  text(h,610,250);
+			  
+			  fill(240,223,113);
+			  text(killed,410,820);
 
 
 			  tint(255, 20);
@@ -140,8 +169,10 @@ public class Main extends PApplet {
 			  image (man,900,540);
 			  image (lincoln,800,540);
 			  image (johnWB,850,540);
+			  fill(255);
 			  text(al,540,250);
-
+			  fill(240,223,113);
+			  text(john,400,820);
 
 
 			  tint(255, 20);
@@ -164,6 +195,8 @@ public class Main extends PApplet {
 
 
 			}
+	
+
 	
 
 }

@@ -15,4 +15,5 @@ public class Controller extends PApplet {
 		Word element = new Word(this);
 		element.drawElement(posX, posY, image, array1);
 	}
+	
 }

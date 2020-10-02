@@ -46,7 +46,9 @@ public class Word extends PApplet{
 			if(listWords.get(i).equals("child")) {	
 				System.out.println("child");
 				//ellipse(300,300,300,300);
+				
 				//nada me pintaaaa :c
+				
 			}else if (listWords.get(i).equals("god")) {
 				System.out.println("god");
 			}else if (listWords.get(i).equals("Hitler")) {
@@ -64,7 +66,9 @@ public class Word extends PApplet{
 			
 			}
 		
-		}			
+		}	
+		
+		
 
 		}
 	
