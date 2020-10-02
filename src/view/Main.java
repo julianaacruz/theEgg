@@ -17,7 +17,11 @@ public class Main extends PApplet {
 	static PImage egg;
 	static PImage johnWB;
 	static PImage people;
-	String s = "I'm Jesus?";
+	String jc = "I'm Jesus?";
+	String h = "I'm Hitler?";
+	String al = "I'm Abraham Lincoln?";
+
+
 
 
 	String [] arrayStory;
@@ -70,6 +74,12 @@ public class Main extends PApplet {
 		// ubicación personajes
 		scale(f);
 		image (bg1,800,540);
+		bg.parallaxEffect(mouseX,795,-1, bg2);
+		bg.parallaxEffect(mouseX,830,-5, bg3);
+		bg.parallaxEffect(mouseX,955,-35, bg4);	
+		
+		textSize(32);
+		
 		
 		int scene = 0;
 		
@@ -101,6 +111,8 @@ public class Main extends PApplet {
 			  image (man,900,540);
 			  image (people,700,540);
 			  image (jesus,590,540);
+			  text(jc,615,250);
+
 
 
 			  tint(255, 20);
@@ -113,6 +125,7 @@ public class Main extends PApplet {
 			  image (man,900,540);
 			  image (people,820,540);
 			  image (hitler,700,540);
+			  text(h,610,250);
 
 
 			  tint(255, 20);
@@ -127,6 +140,8 @@ public class Main extends PApplet {
 			  image (man,900,540);
 			  image (lincoln,800,540);
 			  image (johnWB,850,540);
+			  text(al,540,250);
+
 
 
 			  tint(255, 20);
@@ -146,13 +161,7 @@ public class Main extends PApplet {
 		tint(255, 255);
 		
 		//image (egg,750,540);
-		bg.parallaxEffect(mouseX,795,-1, bg2);
-		bg.parallaxEffect(mouseX,830,-5, bg3);
-		bg.parallaxEffect(mouseX,955,-35, bg4);	
-		
-		textSize(32);
-		text(s,610,250);
-		
+
 
 			}
 	
