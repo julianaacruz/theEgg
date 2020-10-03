@@ -44,25 +44,25 @@ public class Word extends PApplet{
 				//System.out.println(listWords.get(i));
 
 			if(listWords.get(i).equals("child")) {	
-				System.out.println("child");
+				System.out.println("pinta hombre");
 				//ellipse(300,300,300,300);
 				
-				//nada me pintaaaa :c
-				
-			}else if (listWords.get(i).equals("god")) {
-				System.out.println("god");
-			}else if (listWords.get(i).equals("Hitler")) {
-				System.out.println("Hitler");
-			}else if (listWords.get(i).equals("Jesus")) {
-				System.out.println("Jesus");
-			}else if (listWords.get(i).equals("Lincoln")) {
-				System.out.println("Lincoln");
-			}else if (listWords.get(i).equals("egg")) {
-				System.out.println("egg");
-			}
 				/*Element man = new Element(this);
 				man.drawMan(posX, posY, image);*/
+
 				
+			}else if (listWords.get(i).equals("god")) {
+				System.out.println("pinta Dios");
+			}else if (listWords.get(i).equals("Hitler")) {
+				System.out.println("pinta Hitler");
+			}else if (listWords.get(i).equals("Jesus")) {
+				System.out.println("pinta Jesus");
+			}else if (listWords.get(i).equals("Lincoln")) {
+				System.out.println("pinta Lincoln");
+			}else if (listWords.get(i).equals("egg")) {
+				System.out.println("pinta Huevo");
+			}
+								
 			
 			}
 		
