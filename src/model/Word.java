@@ -59,8 +59,6 @@ public class Word extends PApplet{
 				System.out.println("pinta Jesus");
 			}else if (listWords.get(i).equals("Lincoln")) {
 				System.out.println("pinta Lincoln");
-			}else if (listWords.get(i).equals("egg")) {
-				System.out.println("pinta Huevo");
 			}
 								
 			

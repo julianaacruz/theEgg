@@ -34,11 +34,12 @@ public class Main extends PApplet {
 	private String god1 = "“Because someday, you will become like me.\n Because that’s what you are. You’re one of my kind.\n You’re my child.”";
 	private String guy2 = "“So the whole universe, it’s just…”";
 	private String god2 = "“An egg.”";
+	private String save = "SAVE";
+	boolean end=false;
 
-	boolean click=false;
 
 
-	private  ArrayList<String> scenes;
+	//private  ArrayList<String> scenes;
 	String [] arrayStory;
 	Composition bg = new Composition(this);
 	Composition text = new Composition(this);
@@ -81,9 +82,6 @@ public class Main extends PApplet {
 
 	}
 	
-	int i=0, j=0;
-	int x=10, y=15;
-	String message;
 	
 	public void draw() {
 		tint(255, 255);
@@ -99,8 +97,10 @@ public class Main extends PApplet {
 		bg.parallaxEffect(mouseX,795,-1, bg2);
 		bg.parallaxEffect(mouseX,830,-6, bg3);
 		bg.parallaxEffect(mouseX,955,-35, bg4);	
-		
+
 		textSize(40);
+		text(save,1250,919);
+
 		element.drawElement(800, 540, man, arrayStory);
 
 		//CAMBIO DE ESCENA SEGUN UBICACIÓN DEL MOUSE
@@ -108,29 +108,22 @@ public class Main extends PApplet {
 		
 		if (mouseX>270 && mouseX<326 && mouseY>300 && mouseY<472) {
 			scene =1;
-			//scenes.add("1");
 		} else if (mouseX>360 && mouseX<413 && mouseY>300 && mouseY<472) {
 			scene=2;
-			//scenes.add("2");
 		} else if (mouseX>445 && mouseX<492 && mouseY>275 && mouseY<480) {
 			scene=3;
-			//scenes.add("3");
 		} else if (mouseX>530 && mouseX<580 && mouseY>300 && mouseY<472) { 
 			scene=4;
-			//scenes.add("3");
 		} else if (mouseX>700 && mouseX<750 && mouseY>275 && mouseY<472) { 
 			scene=5;
-			//scenes.add("3");
-		} else {
-			scene=0;
-		}
+		} else if (mouseX>996&& mouseX<1088 && mouseY>711 && mouseY<740 && mousePressed==true) { 
+			end=true;
+		} 
 		
-		/*(int i=0; i < scenes.size() ; i++) { 
-			if(scenes.get(i).equals("1")) {	
-				
-			}
+		if(end==true) {
+			scene=6;
+		}
 
-		}*/
 		
 		switch(scene) { //Cambio de "escenas"
 		
@@ -222,6 +215,8 @@ public class Main extends PApplet {
 			  tint(255, 255);
 			  image (touchGod,710,540);
 			  image (man,900,540);
+			  image (egg,770,540);
+
 			  fill(255);
 			  text(guy2,390,250);
 			  fill(240,223,113);
@@ -234,7 +229,11 @@ public class Main extends PApplet {
 			  image (hitler,700,540);
 			  image (jesus,590,540);
 		  break;
-	}}
+		  
+		  case 6:
+			  image (pFinal,745,520);
+			  break;
+		}}
 
 
 				
@@ -254,9 +253,6 @@ public class Main extends PApplet {
 
 	}
 	
-		public void mouseClicked() {
-			click=true;
-		}
-	
+		
 
 }
