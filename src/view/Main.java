@@ -31,7 +31,9 @@ public class Main extends PApplet {
 	private String al = "“I’m Abraham Lincoln?”";
 	private String john = "“And you’re John Wilkes Booth, too”";
 	private String guy1 = "“Why do all this?”";
-	private String god1 = "“Because someday, you will become like me. Because that’s\n what you are. You’re one of my kind. You’re my child.”";
+	private String god1 = "“Because someday, you will become like me.\n Because that’s what you are. You’re one of my kind.\n You’re my child.”";
+	private String guy2 = "“Why do all this?”";
+
 	boolean click=false;
 
 
@@ -87,6 +89,7 @@ public class Main extends PApplet {
 		float f=(float) 0.8;
 		bg1.loadPixels();
 		textFont(montserrat);
+		 textAlign(CORNER);
 
 		
 		// ubicación personajes
@@ -99,7 +102,7 @@ public class Main extends PApplet {
 		textSize(40);
 		element.drawElement(800, 540, man, arrayStory);
 
-		
+		//CAMBIO DE ESCENA SEGUN UBICACIÓN DEL MOUSE
 		int scene = 0;
 		
 		if (mouseX>270 && mouseX<326 && mouseY>300 && mouseY<472) {
@@ -140,7 +143,7 @@ public class Main extends PApplet {
 			
 		  case 1: 
 			  tint(255, 255);
-			  image (god,710,540);
+			  image (touchGod,710,540);
 			  image (man,900,540);
 			  image (people,700,540);
 			  image (jesus,590,540);
@@ -149,7 +152,7 @@ public class Main extends PApplet {
 			  typewriterEffect(jc);
 			 			  
 			  fill(240,223,113);
-			  text(followers,400,820);
+			  text(followers,370,820);
 
 
 			  tint(255, 20);
@@ -159,7 +162,7 @@ public class Main extends PApplet {
 		    
 		  case 2:
 			  tint(255, 255);
-			  image (god,710,540);
+			  image (touchGod,710,540);
 			  image (man,900,540);
 			  image (people,800,540);
 			  image (hitler,700,540);
@@ -178,14 +181,14 @@ public class Main extends PApplet {
 			  
 		  case 3:
 			  tint(255, 255);
-			  image (god,710,540);
+			  image (touchGod,710,540);
 			  image (man,900,540);
 			  image (lincoln,800,540);
 			  image (johnWB,850,540);
 			  fill(255);
-			  text(al,540,250);
+			  text(al,500,250);
 			  fill(240,223,113);
-			  text(john,400,840);
+			  text(john,400,820);
 
 
 			  tint(255, 20);
@@ -198,11 +201,11 @@ public class Main extends PApplet {
 			  tint(255, 255);
 			  image (touchGod,710,540);
 			  image (man,900,540);
-			  
 			  fill(255);
 			  text(guy1,540,250);
 			  fill(240,223,113);
-			  text(god1,200,800);
+			  textAlign(CENTER);
+			  text(god1,760,750);
 
 			  
 			  tint(255, 50);
