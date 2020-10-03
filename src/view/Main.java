@@ -32,7 +32,8 @@ public class Main extends PApplet {
 	private String john = "“And you’re John Wilkes Booth, too”";
 	private String guy1 = "“Why do all this?”";
 	private String god1 = "“Because someday, you will become like me.\n Because that’s what you are. You’re one of my kind.\n You’re my child.”";
-	private String guy2 = "“Why do all this?”";
+	private String guy2 = "“So the whole universe, it’s just…”";
+	private String god2 = "“An egg.”";
 
 	boolean click=false;
 
@@ -114,8 +115,11 @@ public class Main extends PApplet {
 		} else if (mouseX>445 && mouseX<492 && mouseY>275 && mouseY<480) {
 			scene=3;
 			//scenes.add("3");
-		} else if (mouseX>530 && mouseX<580 && mouseY>300 && mouseY<472) { // && click==true
+		} else if (mouseX>530 && mouseX<580 && mouseY>300 && mouseY<472) { 
 			scene=4;
+			//scenes.add("3");
+		} else if (mouseX>700 && mouseX<750 && mouseY>275 && mouseY<472) { 
+			scene=5;
 			//scenes.add("3");
 		} else {
 			scene=0;
@@ -206,6 +210,23 @@ public class Main extends PApplet {
 			  fill(240,223,113);
 			  textAlign(CENTER);
 			  text(god1,760,750);
+
+			  
+			  tint(255, 50);
+			  image (lincoln,800,540);
+			  image (hitler,700,540);
+			  image (jesus,590,540);
+		  break;
+		  
+		  case 5:
+			  tint(255, 255);
+			  image (touchGod,710,540);
+			  image (man,900,540);
+			  fill(255);
+			  text(guy2,390,250);
+			  fill(240,223,113);
+			  textAlign(CENTER);
+			  text(god2,720,750);
 
 			  
 			  tint(255, 50);
